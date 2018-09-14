@@ -42,7 +42,7 @@ class SList {
             return false;
         }
              
-        bool insert(T data) {
+        bool insert(T data) { // Estás repitiendo mucha lógica
             Node<T> **pointer = &head;
             if (head == nullptr){
                 head = new Node<T>(data);
@@ -62,7 +62,7 @@ class SList {
             return false;
         }
              
-        bool remove(T item) {
+        bool remove(T item) { //  No Estás usando el find
             Node<T> *temp1 = head;
             Node<T> *temp2 = head;
             while(temp1 != nullptr){
@@ -81,7 +81,7 @@ class SList {
             if (!head){
                 throw "Lista vacia";
             }else{
-                SListIterator<T> it(head);
+                SListIterator<T> it(head); 
                 return it;
             }
         }
